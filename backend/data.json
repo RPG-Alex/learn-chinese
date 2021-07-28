@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "english": "Hello!",
+        "chinese": "你好！",
+        "pinyin": "nǐhǎo!"
+    },
+    {
+        "id": 2,
+        "english": "You",
+        "chinese": "你",
+        "pinyin": "nǐ"
+    },
+    {
+        "id": 3,
+        "english": "Good",
+        "chinese": "好",
+        "pinyin": "hǎo"
+    },
+    {
+        "id": 4,
+        "english": "Good Bye!",
+        "chinese": "再见！",
+        "pinyin": "zàijiàn！"
+    },
+    {
+        "id": 5,
+        "english": "Name",
+        "pinyin": "míngzi",
+        "chinese": "名字"
+    },
+    {
+        "id": 6,
+        "english": "Me | I",
+        "pinyin": "wǒ",
+        "chinese": "我"
+    },
+    {
+        "id": 7,
+        "english": "What",
+        "pinyin": "shénme",
+        "chinese": "什么"
+    }
+]
