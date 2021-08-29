@@ -8,7 +8,7 @@ class Lessons {
   public function getVocabulary(){
     $this->db->query('SELECT *
                         FROM vocabulary
-                        ORDER BY vocabulary.vid DESC');
+                        ORDER BY vocabulary.vid ASC');
 
     $results= $this->db->resultSet();
 

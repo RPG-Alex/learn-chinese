@@ -1,44 +1,35 @@
-
-function App() {
-  const testData = [
-    {
-      "id":1,
-      "english":"Hello!",
-      "chinese":"你好!",
-      "pinyin":"nǐhǎo!"
-    },
-    {
-      "id":2,
-      "english":"You",
-      "chinese":"你",
-      "pinyin":"nǐ"
-    },
-    {
-      "id": 3,
-      "english":"Good",
-      "chinese":"好",
-      "pinyin":"hǎo"
-    },
-    {
-      "id": 4,
-      "english":"Good Bye!",
-      "chinese":"再见!",
-      "pinyin":"zàijiàn!"
-    }
-  ].map( ( {id, english, pinyin, chinese} ) => {
-    return <div key={id} className="LessonContent">
-      <p><b>English:</b> {english}</p>
-      <p><b>Pinyin: </b>{pinyin}</p>
-      <p><b>Chinese:</b> {chinese}</p>
-    </div>
-});
-  return (
-    <div className="container">
-      <header className="header">Learn Chinese!</header>
-      {testData}
-      <footer>Copyright 2021</footer>
-    </div>
-  );
+import React from 'react';
+import './index.css';
+import './App.css';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import Vocab from './Vocab'
+import AllVocab from './AllVocab'
+import { Link } from 'react-router-dom'
+class App extends React.Component{
+    render() {
+    return (
+        <div className="App container">
+            <Router>
+                <header>Learn Chinese!</header>
+                <Switch>
+                    <Route path="/home/">
+                        <Link to="/vocab/" >
+                            <button className="LessonContent" >Flash Cards</button>
+                        </Link>
+                        <button className="LessonContent">Lesson 1</button>
+                        <button className="LessonContent">About</button>
+                    </Route>
+                    <Route path="/vocab/">
+                        <AllVocab />
+                    </Route>
+                    <Route path="/vocab/:id">
+                        <Vocab  />
+                    </Route>                
+                </Switch>
+                <footer>Copyright 2021</footer>
+            </Router>
+        </div>
+    )
 }
-
+}
 export default App;
